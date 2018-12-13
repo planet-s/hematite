@@ -33,6 +33,7 @@ piston = "0.39.0"
 piston3d-gfx_voxel = "0.26.0"
 pistoncore-glutin_window = { git = "https://gitlab.redox-os.org/redox-os/piston-glutin-window", branch = "redox" }
 rustc-serialize = "0.3.24"
+serde = "1.0"
 serde_derive = "1.0"
 shader_version = "0.3.0"
 vecmath = "0.3.1"

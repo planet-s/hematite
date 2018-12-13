@@ -136,7 +136,7 @@ fn main() {
             .exit_on_esc(true)
             .samples(0)
             .vsync(false)
-            .opengl(shader_version::opengl::OpenGL::V3_2)
+            .opengl(shader_version::opengl::OpenGL::V3_0)
             .build()
             .unwrap();
 
@@ -285,6 +285,11 @@ fn main() {
             });
             let end_duration = start_time.elapsed();
             renderer.flush(&mut device);
+            unsafe {
+                device.with_gl(|gl| {
+                    gl.Finish();
+                });
+            }
             let frame_end_duration = start_time.elapsed();
 
             let fps = fps_counter.tick();

@@ -3,7 +3,7 @@ use gfx;
 use vecmath::{self, Matrix4};
 
 static VERTEX: &'static [u8] = b"
-    #version 150 core
+    #version 130
     uniform mat4 u_projection, u_view;
 
     in vec2 at_tex_coord;
@@ -20,7 +20,7 @@ static VERTEX: &'static [u8] = b"
 ";
 
 static FRAGMENT: &'static [u8] = b"
-    #version 150 core
+    #version 130
     out vec4 out_color;
 
     uniform sampler2D s_texture;

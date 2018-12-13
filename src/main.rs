@@ -217,7 +217,6 @@ fn main() {
 
     let mut staging_buffer = vec![];
     let mut events = Events::new(EventSettings::new().ups(120).max_fps(10_000));
-    let mut frame = 0;
     while let Some(e) = events.next(&mut window) {
         use piston::input::Button::Keyboard;
         use piston::input::Key;
@@ -294,19 +293,16 @@ fn main() {
             let frame_end_duration = start_time.elapsed();
 
             let fps = fps_counter.tick();
-            if frame % 60 == 0 {
-                let title = format!(
-                        "Hematite sort={} render={} total={} in {:.2}s+{:.2}s @ {}FPS - {}",
-                        num_sorted_chunks,
-                        num_chunks,
-                        num_total_chunks,
-                        end_duration.as_secs() as f64 + end_duration.subsec_nanos() as f64 / 1000_000_000.0,
-                        frame_end_duration.as_secs() as f64 + frame_end_duration.subsec_nanos() as f64 / 1000_000_000.0,
-                        fps, world.file_name().unwrap().to_str().unwrap()
-                    );
-                window.set_title(title);
-            }
-            frame += 1;
+            let title = format!(
+                    "Hematite sort={} render={} total={} in {:.2}s+{:.2}s @ {}FPS - {}",
+                    num_sorted_chunks,
+                    num_chunks,
+                    num_total_chunks,
+                    end_duration.as_secs() as f64 + end_duration.subsec_nanos() as f64 / 1000_000_000.0,
+                    frame_end_duration.as_secs() as f64 + frame_end_duration.subsec_nanos() as f64 / 1000_000_000.0,
+                    fps, world.file_name().unwrap().to_str().unwrap()
+                );
+            window.set_title(title);
         }
 
         if let Some(_) = e.after_render_args() {

@@ -11,6 +11,7 @@ extern crate piston;
 extern crate glutin_window;
 extern crate libc;
 extern crate rustc_serialize;
+#[macro_use] extern crate serde_derive;
 extern crate shader_version;
 extern crate vecmath;
 extern crate zip;
@@ -57,7 +58,7 @@ Options:
     --mcversion=<version>    Minecraft version [default: 1.8.8].
 ";
 
-#[derive(RustcDecodable)]
+#[derive(Deserialize)]
 struct Args {
     arg_world: String,
     flag_path: bool,
@@ -85,7 +86,7 @@ fn create_main_targets(dim: gfx::texture::Dimensions) ->
 
 fn main() {
     let args: Args = Docopt::new(USAGE)
-                            .and_then(|dopt| dopt.decode())
+                            .and_then(|dopt| dopt.deserialize())
                             .unwrap_or_else(|e| e.exit());
 
     // Automagically pull MC assets

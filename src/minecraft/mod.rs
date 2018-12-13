@@ -26,7 +26,7 @@ pub fn vanilla_root_path() -> PathBuf {
     buf.push(".minecraft");
     buf
 }
-#[cfg(target_os = "linux")]
+#[cfg(any(target_os = "linux", target_os = "redox"))]
 pub fn vanilla_root_path() -> PathBuf {
     let home = var("HOME");
     let mut buf = PathBuf::from(home);

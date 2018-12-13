@@ -296,7 +296,7 @@ fn main() {
             let fps = fps_counter.tick();
             if frame % 60 == 0 {
                 let title = format!(
-                        "Hematite sort={} render={} total={} in {:.2}ms+{:.2}ms @ {}FPS - {}",
+                        "Hematite sort={} render={} total={} in {:.2}s+{:.2}s @ {}FPS - {}",
                         num_sorted_chunks,
                         num_chunks,
                         num_total_chunks,

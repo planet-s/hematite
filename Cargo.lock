@@ -417,7 +417,7 @@ dependencies = [
 [[package]]
 name = "glutin"
 version = "0.19.0"
-source = "git+https://gitlab.redox-os.org/redox-os/glutin.git?branch=redox#fca7b7cdaecb626e6ce5413b9af0c83c5c16023d"
+source = "git+https://gitlab.redox-os.org/redox-os/glutin.git?branch=redox#3964201924afde7565d134eb2c584c15eeb96221"
 dependencies = [
  "android_glue 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "cgl 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -428,7 +428,7 @@ dependencies = [
  "lazy_static 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "objc 0.2.5 (registry+https://github.com/rust-lang/crates.io-index)",
- "orbclient 0.3.18 (registry+https://github.com/rust-lang/crates.io-index)",
+ "orbclient 0.3.19 (registry+https://github.com/rust-lang/crates.io-index)",
  "osmesa-sys 0.1.2 (git+https://gitlab.redox-os.org/redox-os/osmesa-rs.git?branch=redox)",
  "shared_library 0.1.9 (registry+https://github.com/rust-lang/crates.io-index)",
  "wayland-client 0.21.7 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -709,7 +709,7 @@ dependencies = [
 
 [[package]]
 name = "orbclient"
-version = "0.3.18"
+version = "0.3.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "redox_syscall 0.1.44 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1387,7 +1387,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "winit"
 version = "0.18.0"
-source = "git+https://gitlab.redox-os.org/redox-os/winit.git?branch=redox#edd2d96e366e59900d2aa630afe0f680074ee178"
+source = "git+https://gitlab.redox-os.org/redox-os/winit.git?branch=redox#f0c41a4d6b5bb7846a561d8265c12be6093f3eaa"
 dependencies = [
  "android_glue 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "backtrace 0.3.12 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1398,7 +1398,7 @@ dependencies = [
  "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "objc 0.2.5 (registry+https://github.com/rust-lang/crates.io-index)",
- "orbclient 0.3.18 (registry+https://github.com/rust-lang/crates.io-index)",
+ "orbclient 0.3.19 (registry+https://github.com/rust-lang/crates.io-index)",
  "parking_lot 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "percent-encoding 1.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "smithay-client-toolkit 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1530,7 +1530,7 @@ dependencies = [
 "checksum num-traits 0.2.6 (registry+https://github.com/rust-lang/crates.io-index)" = "0b3a5d7cc97d6d30d8b9bc8fa19bf45349ffe46241e8816f50f62f6d6aaabee1"
 "checksum num_cpus 1.9.0 (registry+https://github.com/rust-lang/crates.io-index)" = "5a69d464bdc213aaaff628444e99578ede64e9c854025aa43b9796530afa9238"
 "checksum objc 0.2.5 (registry+https://github.com/rust-lang/crates.io-index)" = "9833ab0efe5361b1e2122a0544a5d3359576911a42cb098c2e59be8650807367"
-"checksum orbclient 0.3.18 (registry+https://github.com/rust-lang/crates.io-index)" = "e576d70b40c2bcffa266b578b109f31d622f589ef5224d25e059d176e9f08068"
+"checksum orbclient 0.3.19 (registry+https://github.com/rust-lang/crates.io-index)" = "0a35fa1b5d90c19bc174dd4b392e29e8eecf6cf794a7626d9b115b1f40237526"
 "checksum ordered-float 1.0.1 (registry+https://github.com/rust-lang/crates.io-index)" = "2f0015e9e8e28ee20c581cfbfe47c650cedeb9ed0721090e0b7ebb10b9cdbcc2"
 "checksum osmesa-sys 0.1.2 (git+https://gitlab.redox-os.org/redox-os/osmesa-rs.git?branch=redox)" = "<none>"
 "checksum owning_ref 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "49a4b8ea2179e6a2e27411d3bca09ca6dd630821cf6894c6c7c8467a8ee7ef13"

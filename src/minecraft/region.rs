@@ -1,8 +1,7 @@
 use std::cell::RefCell;
-use std::io;
+use std::{fs, io};
 use std::path::Path;
 use gfx;
-use memmap::{Mmap, Protection};
 
 use array::*;
 use chunk::{
@@ -17,7 +16,7 @@ use chunk::{
 use minecraft::nbt::Nbt;
 
 pub struct Region {
-    mmap: Mmap,
+    data: Vec<u8>,
 }
 
 fn array_16x16x16<T, F>(mut f: F) -> [[[T; SIZE]; SIZE]; SIZE]
@@ -32,14 +31,12 @@ fn array_16x16x16<T, F>(mut f: F) -> [[[T; SIZE]; SIZE]; SIZE]
 
 impl Region {
     pub fn open(filename: &Path) -> io::Result<Region> {
-        let mmap = try!(Mmap::open_path(filename, Protection::Read));
-        Ok(Region{mmap: mmap})
+        let data = fs::read(filename)?;
+        Ok(Region{ data })
     }
 
     fn as_slice(&self) -> &[u8] {
-        unsafe {
-            self.mmap.as_slice()
-        }
+        self.data.as_slice()
     }
 
     pub fn get_chunk_column<R: gfx::Resources>(&self, x: u8, z: u8)

@@ -10,7 +10,6 @@ extern crate gfx_voxel;
 extern crate piston;
 extern crate glutin_window;
 extern crate libc;
-extern crate memmap;
 extern crate rustc_serialize;
 extern crate shader_version;
 extern crate vecmath;

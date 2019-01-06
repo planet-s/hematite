@@ -285,11 +285,6 @@ fn main() {
             });
             let end_duration = start_time.elapsed();
             renderer.flush(&mut device);
-            unsafe {
-                device.with_gl(|gl| {
-                    gl.Finish();
-                });
-            }
             let frame_end_duration = start_time.elapsed();
 
             let fps = fps_counter.tick();
